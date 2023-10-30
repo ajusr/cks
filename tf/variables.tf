@@ -1,6 +1,7 @@
 # Required variables
 variable "gcp_project" {
   description = "optimal-sylph-399301"
+  default     = "optimal-sylph-399301"
 }
 
 # Optional variables
@@ -33,10 +34,10 @@ variable "image" {
 #   description = "A startup script passed as metadata"
 #   default     = "touch /tmp/created_by_terraform"
 # }
-variable "startup_script" {
-  description = "Configure Master/Worker"
-  default     = ["sudo -i && bash <(curl -s https://raw.githubusercontent.com/killer-sh/cks-course-environment/master/cluster-setup/latest/install_master.sh)", "sudo -i && bash <(curl -s https://raw.githubusercontent.com/killer-sh/cks-course-environment/master/cluster-setup/latest/install_master.sh)"]
-}
+# variable "startup_script" {
+#   description = "Configure Master/Worker"
+#   default     = ["sudo -i && bash <(curl -s https://raw.githubusercontent.com/killer-sh/cks-course-environment/master/cluster-setup/latest/install_master.sh) >> /tmp/install.log", "sudo -i && bash <(curl -s https://raw.githubusercontent.com/killer-sh/cks-course-environment/master/cluster-setup/latest/install_worker.sh) >> /tmp/install.log"]
+# }
 
 variable "labels" {
   type = map(string)

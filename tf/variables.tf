@@ -1,6 +1,6 @@
 # Required variables
 variable "gcp_project" {
-  description = "optimal-sylph-399301"
+  description = "GCP project to use"
   default     = "optimal-sylph-399301"
 }
 
